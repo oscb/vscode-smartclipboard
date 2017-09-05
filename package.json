@@ -1,0 +1,128 @@
+{
+    "name": "code-palette",
+    "displayName": "Code Palette",
+    "description": "",
+    "version": "0.0.1",
+    "publisher": "oscb",
+    "engines": {
+        "vscode": "^1.15.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:clipboard.copy",
+        "onCommand:clipboard.cut",
+        "onCommand:clipboard.paste-1",
+        "onCommand:clipboard.paste-2",
+        "onCommand:clipboard.paste-3",
+        "onCommand:clipboard.paste-4",
+        "onCommand:clipboard.paste-5",
+        "onCommand:clipboard.showClipboard",
+        "onCommand:clipboard.showClipboardLang",
+        "onCommand:clipboard.showClipboardFile",
+        "onCommand:clipboard.removeClip"
+    ],
+    "main": "./out/src/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "clipboard.showClipboard",
+                "title": "Clipboard"
+            },
+            {
+                "command": "clipboard.showClipboardLang",
+                "title": "Clipboard: Language"
+            },
+            {
+                "command": "clipboard.showClipboardFile",
+                "title": "Clipboard: File"
+            },
+            {
+                "command": "clipboard.removeClip",
+                "title": "Clipboard: Remove"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "clipboard.copy",
+                "key": "ctrl+c",
+                "mac": "cmd+c",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "clipboard.cut",
+                "key": "ctrl+x",
+                "mac": "cmd+x",
+                "when": "editorTextFocus"
+            },
+            { 
+                "command": "clipboard.paste-1",
+                "key": "ctrl+shift+v 1",
+                "mac": "cmd+shift+v 1", 
+                "when": "editorTextFocus"
+            },
+            { 
+                "command": "clipboard.paste-2",
+                "key": "ctrl+shift+v 2",
+                "mac": "cmd+shift+v 2", 
+                "when": "editorTextFocus"
+            },
+            { 
+                "command": "clipboard.paste-3",
+                "key": "ctrl+shift+v 3",
+                "mac": "cmd+shift+v 3", 
+                "when": "editorTextFocus"
+            },
+            { 
+                "command": "clipboard.paste-4",
+                "key": "ctrl+shift+v 4",
+                "mac": "cmd+shift+v 4", 
+                "when": "editorTextFocus"
+            },
+            { 
+                "command": "clipboard.paste-5",
+                "key": "ctrl+shift+v 5",
+                "mac": "cmd+shift+v 5", 
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "clipboard.showClipboard",
+                "key": "ctrl+alt+v 1",
+                "mac": "cmd+alt+v 1",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "clipboard.showClipboardLang",
+                "key": "ctrl+alt+v 2",
+                "mac": "cmd+alt+v 2",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "clipboard.showClipboardFile",
+                "key": "ctrl+alt+v 3",
+                "mac": "cmd+alt+v 3",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "clipboard.removeClip",
+                "key": "ctrl+alt+v d",
+                "mac": "cmd+alt+v d",
+                "when": "editorTextFocus"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "tsc -p ./",
+        "compile": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.0.3",
+        "vscode": "^1.0.0",
+        "mocha": "^2.3.3",
+        "@types/node": "^6.0.40",
+        "@types/mocha": "^2.2.32"
+    }
+}
